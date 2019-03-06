@@ -14,7 +14,7 @@ import RPi.GPIO as GPIO
 import neopixel
 import board
 
-GPIO.setmode(GPIO.BCM) #Set pin number to BCM numbering
+GPIO.setmode(GPIO.BCM) #Set pin number configuration to BCM numbering
 pixels = neopixel.NeoPixel(board.D18, 18) #LEDS on GPIO 18, LED count
 
 # LED strip configuration
