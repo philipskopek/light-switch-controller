@@ -8,7 +8,7 @@
 #SPI pins (GPIO8-11) for potentiometer inputs
 
 from rpi_ws281x import *
-from time import sleep
+import time
 from gpiozero import Button, MCP3008
 import RPi.GPIO as GPIO
 import argparse
@@ -16,10 +16,12 @@ GPIO.setmode(GPIO.BCM) #Set pin number configuration to BCM numbering
 
 
 # LED strip configuration
-LED_COUNT = 20 #number of LED pixels
-LED_PIN = 18 #GPIO pin connected to the pixels (must support PWM!)
+LED_COUNT = 20      #number of LED pixels
+LED_PIN = 18        #GPIO pin connected to the pixels (must support PWM!)
 LED_FREQ_HZ = 800000 #LED signal frequency in hertz (usually 800khz)
-LED_DMA = 5 #DMA channel to use for generating signal (try 5)
+LED_DMA = 5         #DMA channel to use for generating signal (try 5)
+LED_BRIGHTNESS = 255 #Set to 0 for darkest and 255 for brightest
+LED_CHANNEL = 0     # set to '1' for GPIOs 13, 19, 41, 45 or 53
 LED_INVERT = False #set True to invert the signal (when using NPN transistor level shift)
 
 #create pot objects to refer to MCP3008 channel 0 and 1
@@ -117,22 +119,22 @@ if __name__ == '__main__':
                     colorWipe(strip, Color(0, 255, 0))  # Blue wipe
                     colorWipe(strip, Color(0, 0, 255))  # Green wipe
                     button_cycle=1
-                    sleep(.3)
+                    time.sleep(.3)
                 elif button_cycle==1:
                     print ('Theater chase animations.')
                     theaterChase(strip, Color(127, 127, 127))  # White theater chase
                     theaterChase(strip, Color(127,   0,   0))  # Red theater chase
                     theaterChase(strip, Color(  0,   0, 127))  # Blue theater chase
                     button_cycle=2
-                    sleep(.3)
+                    time.sleep(.3)
                 elif button_cycle==2:
                     rainbow(strip)
                     button_cycle=3
-                    sleep(.3)
+                    time.sleep(.3)
                 elif button_cycle==3:
                     theaterChaseRainbow(strip)
                     button_cycle=0
-                    sleep(.3)
+                    time.sleep(.3)
 
     except KeyboardInterrupt:
         if args.clear:
