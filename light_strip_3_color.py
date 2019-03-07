@@ -15,7 +15,7 @@ import neopixel
 import board
 
 GPIO.setmode(GPIO.BCM) #Set pin number configuration to BCM numbering
-pixels = neopixel.NeoPixel(board.D18, 18) #LEDS on GPIO 18, LED count
+pixels = neopixel.NeoPixel(board.D18, 15) #LEDS on GPIO 18, LED count
 
 # LED strip configuration
 LED_COUNT = 20 #number of LED pixels
