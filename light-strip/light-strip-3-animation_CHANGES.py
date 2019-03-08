@@ -153,7 +153,7 @@ if __name__ == '__main__':
 
 # ********* Start of loop 3
 
-                elif (button_cycle == 2):
+            elif (button_cycle == 2):
                     while button_cycle == 2:      # Run first anim
 
                         print ("Button Was Pressed")
