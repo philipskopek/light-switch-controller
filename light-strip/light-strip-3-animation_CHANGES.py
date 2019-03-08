@@ -16,7 +16,7 @@ GPIO.setmode(GPIO.BCM) #Set pin number configuration to BCM numbering
 
 
 # LED strip configuration
-LED_COUNT = 15      #number of LED pixels
+LED_COUNT = 8      #number of LED pixels
 LED_PIN = 18        #GPIO pin connected to the pixels (must support PWM!)
 LED_FREQ_HZ = 800000 #LED signal frequency in hertz (usually 800khz)
 LED_DMA = 5         #DMA channel to use for generating signal (try 5)
@@ -133,7 +133,7 @@ if __name__ == '__main__':
 
 # ********* Start of loop 2
 
-                if (button_cycle == 1):
+            elif (button_cycle == 1):
                     while button_cycle == 1:      # Run first anim
 
                         print ("Button Was Pressed")
@@ -153,7 +153,7 @@ if __name__ == '__main__':
 
 # ********* Start of loop 3
 
-                if (button_cycle == 2):
+                elif (button_cycle == 2):
                     while button_cycle == 2:      # Run first anim
 
                         print ("Button Was Pressed")
@@ -165,30 +165,3 @@ if __name__ == '__main__':
                             time.sleep(.3)
 
 # ********* End of loop 3
-
-
-
-
-
-
-
-
-
-
-
-
-                elif button_cycle==1:
-                    print ('Theater chase animations.')
-                    theaterChase(strip, Color(127, 127, 127))  # White theater chase
-                    theaterChase(strip, Color(127,   0,   0))  # Red theater chase
-                    theaterChase(strip, Color(  0,   0, 127))  # Blue theater chase
-                    button_cycle=2
-                    time.sleep(.3)
-                elif button_cycle==2:
-                    rainbow(strip)
-                    button_cycle=3
-                    time.sleep(.3)
-                elif button_cycle==3:
-                    theaterChaseRainbow(strip)
-                    button_cycle=0
-                    time.sleep(.3)
