@@ -133,19 +133,19 @@ if __name__ == '__main__':
 
 # ********* Start of loop 2
 
-            elif (button_cycle == 1):
-                    while button_cycle == 1:      # Run first anim
+                elif (button_cycle == 1):
+                        while button_cycle == 1:      # Run first anim
 
-                        print ("Button Was Pressed")
-                        print ('Theater chase animations.')
+                            print ("Button Was Pressed")
+                            print ('Theater chase animations.')
 
-                        theaterChase(strip, Color(127, 127, 127))  # White theater chase
-                        theaterChase(strip, Color(127,   0,   0))  # Red theater chase
-                        theaterChase(strip, Color(  0,   0, 127))  # Blue theater chase
+                            theaterChase(strip, Color(127, 127, 127))  # White theater chase
+                            theaterChase(strip, Color(127,   0,   0))  # Red theater chase
+                            theaterChase(strip, Color(  0,   0, 127))  # Blue theater chase
 
-                        if GPIO.input(button)== 0:
-                            button_cycle = 2
-                            time.sleep(.3)
+                            if GPIO.input(button)== 0:
+                                button_cycle = 2
+                                time.sleep(.3)
 
 # ********* End of loop 2
 
@@ -153,15 +153,15 @@ if __name__ == '__main__':
 
 # ********* Start of loop 3
 
-            elif (button_cycle == 2):
-                    while button_cycle == 2:      # Run first anim
+                elif (button_cycle == 2):
+                        while button_cycle == 2:      # Run first anim
 
-                        print ("Button Was Pressed")
-                        print ('Rainbow animations.')
+                            print ("Button Was Pressed")
+                            print ('Rainbow animations.')
 
-                        if GPIO.input(button)== 0:
-                            rainbow(strip)
-                            button_cycle = 0
-                            time.sleep(.3)
+                            if GPIO.input(button)== 0:
+                                rainbow(strip)
+                                button_cycle = 0
+                                time.sleep(.3)
 
 # ********* End of loop 3
