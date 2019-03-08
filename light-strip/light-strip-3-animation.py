@@ -34,6 +34,7 @@ GPIO.setup(button, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 
 # Define functions which animate LEDs in various ways.
 
+# Cycles through LED to create rainbow animation.
 def wheel(pos):
     """Generate rainbow colors across 0-255 positions."""
     if pos < 85:
