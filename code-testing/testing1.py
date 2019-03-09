@@ -9,7 +9,7 @@ GPIO.setwarnings(False) # Ignore warning for now
 
 
 
-GPIO.add_event_detect(2, GPIO.FALLING)
+GPIO.add_event_detect(2, GPIO.FALLING, bouncetime=630)
 while True:
     if GPIO.event_detected(2):
         print('Button pressed')
