@@ -16,7 +16,7 @@ GPIO.setmode(GPIO.BCM) #Set pin number configuration to BCM numbering
 
 
 # LED strip configuration
-LED_COUNT = 15      #number of LED pixels
+LED_COUNT = 8      #number of LED pixels
 LED_PIN = 18        #GPIO pin connected to the pixels (must support PWM!)
 LED_FREQ_HZ = 800000 #LED signal frequency in hertz (usually 800khz)
 LED_DMA = 5         #DMA channel to use for generating signal (try 5)
@@ -25,10 +25,6 @@ LED_CHANNEL = 0     # set to '1' for GPIOs 13, 19, 41, 45 or 53
 LED_INVERT = False #set True to invert the signal (when using NPN transistor level shift)
 
 
-#create pot objects to refer to MCP3008 channel 0 and 1
-pot_brightness = MCP3008(0)
-pot_speed = MCP3008(1)
-#connect pushbutton to GPIO pin 2, pull-up
 button = 2 #button set to GPIO2
 GPIO.setup(button, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 
@@ -96,17 +92,14 @@ def theaterChase(strip, color, wait_ms=50, iterations=10):
 button_cycle = 0
 def button_callback(channel):
     global button_cycle
-    while True:
-
 # ********* Start of loop 1
-                                      # OnPressed() --> 0
 
+    while True:
         if (button_cycle == 0):
             while button_cycle == 0:      # Run first anim
 
                 print ("Button Was Pressed")
                 print ('Color wipe animations.')
-
                 colorWipe(strip, Color(255, 0, 0))  # Red wipe
                 colorWipe(strip, Color(0, 255, 0))  # Blue wipe
                 colorWipe(strip, Color(0, 0, 255))  # Green wipe
@@ -116,16 +109,11 @@ def button_callback(channel):
                     time.sleep(.2)
 # ********* End of loop 1
 
-
-
 # ********* Start of loop 2
-
         elif (button_cycle == 1):
             while button_cycle == 1:      # Run first anim
-
                 print ("Button Was Pressed")
                 print ('Theater chase animations.')
-
                 theaterChase(strip, Color(127, 127, 127))  # White theater chase
                 theaterChase(strip, Color(127,   0,   0))  # Red theater chase
                 theaterChase(strip, Color(  0,   0, 127))  # Blue theater chase
@@ -133,20 +121,15 @@ def button_callback(channel):
                 if GPIO.event_detected(2):
                     button_cycle = 2
                     time.sleep(.2)
-
 # ********* End of loop 2
 
-
-
 # ********* Start of loop 3
-
         elif (button_cycle == 2):
             while button_cycle == 2:      # Run first anim
-
                 print ("Button Was Pressed")
                 print ('Rainbow animations.')
                 theaterChaseRainbow(strip)
-
+                
                 if GPIO.event_detected(2):
                     button_cycle = 2
                     time.sleep(.2)
