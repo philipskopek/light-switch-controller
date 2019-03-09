@@ -10,7 +10,7 @@ def button_callback(channel):
     print("Button was pushed!")
 
 
-GPIO.add_event_detect(2, GPIO.FALLING, callback=button_callback, bouncetime=750)
+GPIO.add_event_detect(2, GPIO.FALLING, callback=button_callback, bouncetime=630)
 
 try:
     while True:
