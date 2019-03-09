@@ -8,7 +8,7 @@ GPIO.setup(button, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 def button_callback(channel):
     print("Button was pushed!")
 
-GPIO.add_event_detect(4, GPIO.RISING, callback=toggleState, bouncetime=300)
+GPIO.add_event_detect(4, GPIO.RISING, callback=button_callback, bouncetime=300)
 
 try:
     while True:
