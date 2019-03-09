@@ -8,9 +8,9 @@ GPIO.setwarnings(False) # Ignore warning for now
 
 def button_callback(channel):
     print("Button was pushed!")
-    
 
-GPIO.add_event_detect(2, GPIO.FALLING, callback=button_callback, bouncetime=500)
+
+GPIO.add_event_detect(2, GPIO.FALLING, callback=button_callback, bouncetime=1000)
 
 while True:
         time.sleep(20) #you can put every value of sleep you want here..
