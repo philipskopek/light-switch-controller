@@ -23,7 +23,7 @@ LED_DMA = 5         #DMA channel to use for generating signal (try 5)
 LED_BRIGHTNESS = 150 #Set to 0 for darkest and 255 for brightest
 LED_CHANNEL = 0     # set to '1' for GPIOs 13, 19, 41, 45 or 53
 LED_INVERT = False #set True to invert the signal (when using NPN transistor level shift)
-button_cycle = 0
+
 
 #create pot objects to refer to MCP3008 channel 0 and 1
 pot_brightness = MCP3008(0)
@@ -93,7 +93,7 @@ def theaterChase(strip, color, wait_ms=50, iterations=10):
             for i in range(0, strip.numPixels(), 3):
                 strip.setPixelColor(i+q, 0)
 
-
+button_cycle = 0
 def button_callback(channel):
     while True:
 
