@@ -158,9 +158,9 @@ if __name__ == '__main__':
 
                             print ("Button Was Pressed")
                             print ('Rainbow animations.')
+                            theaterChaseRainbow(strip)
 
                             if GPIO.input(button)== 0:
-                                rainbow(strip)
                                 button_cycle = 0
                                 time.sleep(.3)
 
