@@ -11,4 +11,4 @@ def button_callback(channel):
 GPIO.add_event_detect(4, GPIO.RISING, callback=button_callback, bouncetime=300)
 
 while True:
-        time.sleep(60) #you can put every value of sleep you want here..
+        time.sleep(20) #you can put every value of sleep you want here..
