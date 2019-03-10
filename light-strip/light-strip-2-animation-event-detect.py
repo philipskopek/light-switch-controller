@@ -112,12 +112,9 @@ strip.begin()
 
 while True:
     if button_cycle == 0:
-        while button_cycle == 0:
-            print ("Button Was Pressed 0")
-            print ('Color wipe animations.')
+        print ("Button Was Pressed 0")
+        print ('Color wipe animations.')
 
     elif button_cycle == 1:
-        while button_cycle == 1:      # Run first anim
-            print ("Button Was Pressed 1")
-            print ('Theater chase animations.')
-            
+        print ("Button Was Pressed 1")
+        print ('Theater chase animations.')
