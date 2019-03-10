@@ -9,9 +9,7 @@
 
 from rpi_ws281x import *
 import time
-from gpiozero import Button, MCP3008
 import RPi.GPIO as GPIO
-import argparse
 GPIO.setmode(GPIO.BCM) #Set pin number configuration to BCM numbering
 
 
