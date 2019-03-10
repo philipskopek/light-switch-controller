@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-=======
+
 #Philip Skopek Light_Strp_Controller
 #This script utilizes a push button to cycle trhough different animations
 #on the WS2182B LED Strip with a potentiometer for brightness control
