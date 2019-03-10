@@ -93,7 +93,7 @@ button_cycle = 0
 def button_callback(channel):
     global button_cycle
     if (button_cycle%3 == 0):
-        while button_cycle%3 == 0:      # Run first anim
+        while True:      # Run first anim
             print ("Button Was Pressed 0")
             print ('Color wipe animations.')
             colorWipe(strip, Color(255, 0, 0))  # Red wipe
@@ -101,14 +101,14 @@ def button_callback(channel):
             colorWipe(strip, Color(0, 0, 255))  # Green wipe
 
     elif (button_cycle%3 == 1):
-        while button_cycle%3 == 1:      # Run first anim
+        while True:      # Run first anim
             print ("Button Was Pressed 1")
             print ('Theater chase animations.')
             theaterChase(strip, Color(127, 127, 127))  # White theater chase
             theaterChase(strip, Color(127,   0,   0))  # Red theater chase
             theaterChase(strip, Color(  0,   0, 127))  # Blue theater chase
     elif (button_cycle%3 == 2):
-        while button_cycle%3 == 2:      # Run first anim
+        while True:     # Run first anim
             print ("Button Was Pressed 2")
             print ('Rainbow animations.')
             theaterChaseRainbow(strip)
