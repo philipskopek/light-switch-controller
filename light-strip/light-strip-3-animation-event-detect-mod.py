@@ -133,6 +133,7 @@ if __name__ == '__main__':
     try:
         while True:
             time.sleep(60)
+            print("sleep")
 
     except KeyboardInterrupt:
         GPIO.cleanup()
