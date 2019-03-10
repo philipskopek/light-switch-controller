@@ -125,4 +125,3 @@ while True:
             theaterChase(strip, Color(127, 127, 127))  # White theater chase
             theaterChase(strip, Color(127,   0,   0))  # Red theater chase
             theaterChase(strip, Color(  0,   0, 127))  # Blue theater chase
->>>>>>> 8e2e161f6a64caca59e316828a388179070c0134
