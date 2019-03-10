@@ -94,10 +94,7 @@ button_cycle = 0
 
 def animation():
     global button_cycle
-    if button_cycle == 0:
-        button_cycle=1
-    else:
-        button_cycle=0
+    button_cycle=button_cycle+2
 
 
 
@@ -112,10 +109,10 @@ strip.begin()
 GPIO.add_event_detect(2, GPIO.FALLING, callback=animation, bouncetime=630)
 while True:
 
-    if button_cycle == 0:
+    if button_cycle%2 == 0:
         print ("Button Was Pressed 0")
         print ('Color wipe animations.')
 
-    elif button_cycle == 1:
+    elif button_cycle%2 == 1:
         print ("Button Was Pressed 1")
         print ('Theater chase animations.')
