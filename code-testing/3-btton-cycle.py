@@ -10,16 +10,13 @@ button_cycle = 0
 def button_callback(channel):
     global button_cycle
     if (button_cycle%3 == 0):
-        while True:
-            print('button cycle 0')
+        print('button cycle 0')
 
     elif (button_cycle%3 == 1):
-        while True:
-            print('button cycle 1')
+        print('button cycle 1')
 
     elif (button_cycle%3 == 2):
-        while True:
-            print('button cycle 2')
+        print('button cycle 2')
     button_cycle = button_cycle + 1
 
 
