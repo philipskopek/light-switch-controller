@@ -13,16 +13,13 @@ def button_callback(channel):
 
     while True:
         if (button_cycle%3 == 0):
-            while button_cycle%3 == 0:
-                print('button cycle 0')
+            print('button cycle 0')
 
         elif (button_cycle%3 == 1):
-            while (button_cycle%3 == 1):
-                print('button cycle 1')
+            print('button cycle 1')
 
         elif (button_cycle%3 == 2):
-            while (button_cycle%3 == 2):
-                print('button cycle 2')
+            print('button cycle 2')
 
 
 GPIO.add_event_detect(2, GPIO.FALLING, callback=button_callback, bouncetime=630)
