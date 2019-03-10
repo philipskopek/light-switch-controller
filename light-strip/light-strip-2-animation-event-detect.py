@@ -14,7 +14,7 @@ GPIO.setmode(GPIO.BCM) #Set pin number configuration to BCM numbering
 
 
 # LED strip configuration
-LED_COUNT = 8      #number of LED pixels
+LED_COUNT = 10      #number of LED pixels
 LED_PIN = 18        #GPIO pin connected to the pixels (must support PWM!)
 LED_FREQ_HZ = 800000 #LED signal frequency in hertz (usually 800khz)
 LED_DMA = 5         #DMA channel to use for generating signal (try 5)
