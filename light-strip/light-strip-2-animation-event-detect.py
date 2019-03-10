@@ -111,16 +111,12 @@ strip.begin()
 
 while True:
     if button_cycle == 0:
-        while True:
+        while button_cycle == 0:
             print ("Button Was Pressed 0")
             print ('Color wipe animations.')
-            colorWipe(strip, Color(255, 0, 0))  # Red wipe
-            colorWipe(strip, Color(0, 255, 0))  # Blue wipe
-            colorWipe(strip, Color(0, 0, 255))  # Green wipe
+
     elif button_cycle == 1:
-        while True:      # Run first anim
+        while button_cycle == 1:      # Run first anim
             print ("Button Was Pressed 1")
             print ('Theater chase animations.')
-            theaterChase(strip, Color(127, 127, 127))  # White theater chase
-            theaterChase(strip, Color(127,   0,   0))  # Red theater chase
-            theaterChase(strip, Color(  0,   0, 127))  # Blue theater chase
+            
