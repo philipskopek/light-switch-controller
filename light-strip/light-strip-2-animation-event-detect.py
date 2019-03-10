@@ -93,7 +93,7 @@ button_cycle = 0
 
 
 def animation(button_cycle):
-    global button_cycle
+    
     button_cycle=button_cycle+1
 
 
