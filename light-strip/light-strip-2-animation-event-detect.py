@@ -111,14 +111,14 @@ strip = Adafruit_NeoPixel(LED_COUNT, LED_PIN, LED_FREQ_HZ, LED_DMA, LED_INVERT, 
 strip.begin()
 
 while True:
-    if button_cycle = 0:
+    if button_cycle == 0:
         while True:
             print ("Button Was Pressed 0")
             print ('Color wipe animations.')
             colorWipe(strip, Color(255, 0, 0))  # Red wipe
             colorWipe(strip, Color(0, 255, 0))  # Blue wipe
             colorWipe(strip, Color(0, 0, 255))  # Green wipe
-    elif button_cycle = 1:
+    elif button_cycle == 1:
         while True:      # Run first anim
             print ("Button Was Pressed 1")
             print ('Theater chase animations.')
