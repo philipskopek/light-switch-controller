@@ -92,8 +92,8 @@ def theaterChase(strip, color, wait_ms=50, iterations=10):
 button_cycle = 0
 
 
-def animation(button_cycle):
-    
+def animation():
+    global button_cycle
     button_cycle=button_cycle+1
 
 
@@ -117,4 +117,3 @@ while True:
     elif button_cycle%2 == 1:
         print ("Button Was Pressed 1")
         print ('Theater chase animations.')
-        time.sleep(.3)
