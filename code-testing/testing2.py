@@ -9,9 +9,7 @@ button_cycle = 0
 
 def button_callback(channel):
     global button_cycle
-    button_cycle = button_cycle + 1
 
-    while True:
         if (button_cycle%3 == 0):
             print('button cycle 0')
 
@@ -20,6 +18,8 @@ def button_callback(channel):
 
         elif (button_cycle%3 == 2):
             print('button cycle 2')
+    button_cycle = button_cycle + 1
+
 
 
 GPIO.add_event_detect(2, GPIO.FALLING, callback=button_callback, bouncetime=630)
