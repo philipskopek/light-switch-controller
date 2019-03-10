@@ -112,7 +112,9 @@ while True:
     if button_cycle%2 == 0:
         print ("Button Was Pressed 0")
         print ('Color wipe animations.')
+        time.sleep(.3)
 
     elif button_cycle%2 == 1:
         print ("Button Was Pressed 1")
         print ('Theater chase animations.')
+        time.sleep(.3)
