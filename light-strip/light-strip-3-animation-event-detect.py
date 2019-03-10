@@ -20,7 +20,7 @@ LED_COUNT = 8      #number of LED pixels
 LED_PIN = 18        #GPIO pin connected to the pixels (must support PWM!)
 LED_FREQ_HZ = 800000 #LED signal frequency in hertz (usually 800khz)
 LED_DMA = 5         #DMA channel to use for generating signal (try 5)
-LED_BRIGHTNESS = 150 #Set to 0 for darkest and 255 for brightest
+LED_BRIGHTNESS = 90 #Set to 0 for darkest and 255 for brightest
 LED_CHANNEL = 0     # set to '1' for GPIOs 13, 19, 41, 45 or 53
 LED_INVERT = False #set True to invert the signal (when using NPN transistor level shift)
 
@@ -92,7 +92,7 @@ def theaterChase(strip, color, wait_ms=50, iterations=10):
 button_cycle = 0
 def button_callback(channel):
     global button_cycle
-    
+
 # ********* Start of loop 1
 
     while True:
