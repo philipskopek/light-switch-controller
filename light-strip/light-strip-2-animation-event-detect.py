@@ -92,7 +92,7 @@ def theaterChase(strip, color, wait_ms=50, iterations=10):
 button_cycle = 0
 
 
-def animation():
+def animation(button_cycle):
     global button_cycle
     button_cycle=button_cycle+1
 
