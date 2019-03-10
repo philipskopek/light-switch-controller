@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-=======
+
 
 #Philip Skopek Light_Strp_Controller
 #This script utilizes a push button to cycle trhough different animations
@@ -122,7 +121,3 @@ while True:
             print ("Button Was Pressed 1")
             print ('Theater chase animations.')
             
-<<<<<<< HEAD
->>>>>>> bce02e14da235994ec0c0373910f1be4ce6ca25a
-=======
->>>>>>> bce02e14da235994ec0c0373910f1be4ce6ca25a
