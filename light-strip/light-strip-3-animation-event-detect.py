@@ -92,6 +92,7 @@ def theaterChase(strip, color, wait_ms=50, iterations=10):
 button_cycle = 0
 def button_callback(channel):
     global button_cycle
+    
 # ********* Start of loop 1
 
     while True:
@@ -129,7 +130,7 @@ def button_callback(channel):
                 print ("Button Was Pressed")
                 print ('Rainbow animations.')
                 theaterChaseRainbow(strip)
-                
+
                 if GPIO.event_detected(2):
                     button_cycle = 2
                     time.sleep(.2)
