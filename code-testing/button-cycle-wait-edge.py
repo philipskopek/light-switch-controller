@@ -106,8 +106,6 @@ def animation():
 strip = Adafruit_NeoPixel(LED_COUNT, LED_PIN, LED_FREQ_HZ, LED_DMA, LED_INVERT, LED_BRIGHTNESS, LED_CHANNEL)
 # Intialize the library (must be called once before other functions).
 strip.begin()
-
-while True:
     GPIO.wait_for_edge(button, GPIO.FALLING)
     if button_cycle%2 == 0:
         print ("Button Was Pressed 0")
