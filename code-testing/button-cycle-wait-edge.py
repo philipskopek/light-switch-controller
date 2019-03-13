@@ -108,15 +108,15 @@ strip = Adafruit_NeoPixel(LED_COUNT, LED_PIN, LED_FREQ_HZ, LED_DMA, LED_INVERT, 
 strip.begin()
 
 while True:
-    channel = GPIO.wait_for_edge(button, GPIO.FALLING)
+    GPIO.add_event_detect(2, GPIO.FALLING, callback=animation, bouncetime=630)
     if button_cycle%2 == 0:
-        while channel is 0:
+        while button_cycle%2 == 0:
             print ("Button Was Pressed 0")
             print ('Color wipe animations.')
             time.sleep(.3)
 
     elif button_cycle%2 == 1:
-        while channel is 0:
+        while button_cycle%2 == 1:
             print ("Button Was Pressed 1")
             print ('Theater chase animations.')
-    button_cycle = button_cycle + 1
+    
