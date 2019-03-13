@@ -92,7 +92,7 @@ def theaterChase(strip, color, wait_ms=50, iterations=10):
 button_cycle = 0
 
 
-def animation(self):
+def animation():
     global button_cycle
     button_cycle=button_cycle+1
 
@@ -108,7 +108,7 @@ strip = Adafruit_NeoPixel(LED_COUNT, LED_PIN, LED_FREQ_HZ, LED_DMA, LED_INVERT, 
 strip.begin()
 
 while True:
-    GPIO.add_event_detect(2, GPIO.FALLING, callback=animation, bouncetime=630)
+    GPIO.wait_for_edge(button, GPIO.FALLING)
     if button_cycle%2 == 0:
         while button_cycle%2 == 0:
             print ("Button Was Pressed 0")
@@ -119,3 +119,4 @@ while True:
         while button_cycle%2 == 1:
             print ("Button Was Pressed 1")
             print ('Theater chase animations.')
+    button_cycle = button_cycle + 1
