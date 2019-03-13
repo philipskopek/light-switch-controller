@@ -110,11 +110,13 @@ strip.begin()
 while True:
     GPIO.wait_for_edge(button, GPIO.FALLING)
     if button_cycle%2 == 0:
-        print ("Button Was Pressed 0")
-        print ('Color wipe animations.')
-        time.sleep(.3)
+        while button_cycle%2 == 0:
+            print ("Button Was Pressed 0")
+            print ('Color wipe animations.')
+            time.sleep(.3)
 
     elif button_cycle%2 == 1:
-        print ("Button Was Pressed 1")
-        print ('Theater chase animations.')
+        while button_cycle%2 == 1:
+            print ("Button Was Pressed 1")
+            print ('Theater chase animations.')
     button_cycle = button_cycle + 1
