@@ -12,7 +12,7 @@
 from rpi_ws281x import *
 import time
 import RPi.GPIO as GPIO
-GPIO.setmode(GPIO.BCM) #Set pin number configuration to BCM numbering
+GPIO.setmode(GPIO.BCM) #Set pin numbercd .. configuration to BCM numbering
 
 
 # LED strip configuration
@@ -108,7 +108,7 @@ strip = Adafruit_NeoPixel(LED_COUNT, LED_PIN, LED_FREQ_HZ, LED_DMA, LED_INVERT, 
 strip.begin()
 GPIO.add_event_detect(2, GPIO.FALLING, callback=animation, bouncetime=630)
 while True:
-    GPIO.wait_for_edge(button, GPIP.FALLING)
+    GPIO.wait_for_edge(button, GPIO.FALLING)
     if button_cycle%2 == 0:
         print ("Button Was Pressed 0")
         print ('Color wipe animations.')
