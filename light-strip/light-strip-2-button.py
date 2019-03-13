@@ -108,7 +108,7 @@ strip = Adafruit_NeoPixel(LED_COUNT, LED_PIN, LED_FREQ_HZ, LED_DMA, LED_INVERT, 
 strip.begin()
 GPIO.add_event_detect(2, GPIO.FALLING, callback=animation, bouncetime=630)
 while True:
-    GPIO.wait_for_edge(button, GPIP.FALLING)
+
     if button_cycle%2 == 0:
         print ("Button Was Pressed 0")
         print ('Color wipe animations.')
